@@ -34,7 +34,7 @@
 }
 
 .header__theme-menu-button:focus {
-  outline: 0; 
+  outline: 0;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -70,7 +70,7 @@
   max-width: 491px;
   font-size: 18px;
   font-weight: 700;
-  line-height: 23.4px; 
+  line-height: 23.4px;
   background-color: var(--paragraph-background-color);
   margin-right: 20px;
   margin-left: auto;
@@ -215,7 +215,7 @@
   margin-bottom: 20px;
 }
 
-.block-three__content-wrapper p:not(:last-child){
+.block-three__content-wrapper p:not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -247,23 +247,23 @@
   object-fit: cover;
 }
 
-.gallery__item-1{
+.gallery__item-1 {
   grid-area: item-1;
 }
 
-.gallery__item-2{
+.gallery__item-2 {
   grid-area: item-2;
 }
 
-.gallery__item-3{
+.gallery__item-3 {
   grid-area: item-3;
 }
 
-.gallery__item-4{
+.gallery__item-4 {
   grid-area: item-4;
 }
 
-.gallery__item-5{
+.gallery__item-5 {
   grid-area: item-5;
 }
 
