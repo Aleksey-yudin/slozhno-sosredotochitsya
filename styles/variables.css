@@ -1,4 +1,21 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+
+@import '../fonts/fonts.css';
+
+:root {
+  --background-color: #FFF1F7;
+  --text-color: #353430;
+  --color-hover: rgba(50, 49, 45, 0.40);
+  --paragraph-color: #353430;
+  --header-text-color: #353430;
+  --text-decoration: #353430;
+  --h1-text-color: #FFC2E6;
+  --h3-text-color: #353430;
+  --h1-text-shadow: 4px 4px 0px #FF0070;
+  --paragraph-background-color: #FF8DCB;
+  --background-img: url(../images/cover-image-light.png);
+  --hide-rec: none;
+}
+
+
+
+
