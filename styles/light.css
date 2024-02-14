@@ -12,5 +12,6 @@
   --paragraph-background-color: #FF8DCB;
   --background-img: url(../images/cover-image-light.png);
   --hide-rec: none;
+  --font: "IBM Plex Mono", monospace;
 }
 

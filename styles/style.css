@@ -8,20 +8,24 @@
   background-attachment: fixed;
 }
 
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
 .header__theme-menu-list {
   display: flex;
   justify-content: center;
   list-style-type: none;
   gap: 10px;
   padding-top: 20px;
-  margin-bottom: 274px;
+  margin-bottom: 273px;
 }
 
 .header__theme-menu-button {
   height: 26px;
   padding: 0px 13px;
   text-transform: lowercase;
-  font-family: "IBM Plex Mono";
+  font-family: var(--font);
   font-size: 18px;
   border: 1px solid rgba(50, 49, 45, 0);
   color: var(--header-text-color);
@@ -55,7 +59,7 @@
 .decorated__title-footer {
   color: var(--h1-text-color);
   text-shadow: var(--h1-text-shadow);
-  font-family: "IBM Plex Mono";
+  font-family: var(--font);
   font-size: 157px;
   font-weight: 700;
   line-height: 82.5%;
@@ -67,7 +71,7 @@
 
 .decorated-text {
   color: var(--text-decoration);
-  font-family: "IBM Plex Mono";
+  font-family: var(--font);
   max-width: 491px;
   font-size: 18px;
   font-weight: 700;
@@ -106,7 +110,7 @@
 }
 
 .decorated__rec {
-  font-family: 'IBM Plex Mono';
+  font-family: var(--font);
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -133,13 +137,13 @@
   margin-bottom: 80px;
 }
 
-.block-why__right-column p:nth-of-type(1) {
+.block-why__right-column p:not(:last-child) {
   margin-bottom: 20px;
 }
 
 .block__title {
   color: var(--text-color);
-  font-family: "IBM Plex Mono";
+  font-family: var(--font);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -148,7 +152,7 @@
 .block__subtitle {
   color: var(--h3-text-color);
   background-color: var(--paragraph-background-color);
-  font-family: "IBM Plex Mono";
+  font-family: var(--font);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -157,7 +161,7 @@
 
 .block__text {
   color: var(--paragraph-color);
-  font-family: "IBM Plex Mono";
+  font-family: var(--font);
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -166,7 +170,7 @@
 .block__content-subtitle {
   color: var(--h3-text-color);
   background-color: var(--paragraph-background-color);
-  font-family: "IBM Plex Mono";
+  font-family: var(--font);
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -174,31 +178,22 @@
 }
 
 .block-what {
-  display: grid;
-  grid-template-columns: 0.98fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "first . ."
-    "second-1 second-2 second-3";
-  padding: 0 20px;
-  gap: 20px;
   margin-bottom: 80px;
+  padding: 0 20px;
 }
 
-.block-what__title {
-  grid-area: first;
+.block-what__title{
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 0.97fr 1fr 1fr;
+  gap: 20px;
 }
 
-.block-what__left {
-  grid-area: second-1;
-}
-
-.block-what__center {
-  grid-area: second-2;
-}
-
-.block-what__right {
-  grid-area: second-3;
+.block-what__row-wrapper {
+  display: grid;
+  grid-template-columns: 0.97fr 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
 }
 
 .block-how__subtitle {
@@ -276,6 +271,16 @@
   border-right: 1px solid var(--text-color);
 }
 
+@media (max-width:900px) {
+
+  .block-what__row-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
 
   .header__theme-menu-list {
@@ -297,22 +302,28 @@
   .decorated-text {
     max-width: 364px;
   }
+}
 
-  .block-what {
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "first . ."
-      "second-1 second-1 second-1"
-      "second-2 second-2 second-2"
-      "second-3 second-3 second-3";
+@media (max-width: 600px) {
+
+  .header__theme-menu-list {
+    padding-top: 75px;
+    margin-bottom: 65px;
+  }
+
+  .decorated__title-footer {
+    font-size: 116px;
+  }
+
+  .decorated__title-footer-margin-bottom {
+    margin-bottom: 55px;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 520px) {
+
   .header__theme-menu-list {
     padding-right: 10px;
-    padding-top: 75px;
-    margin-bottom: 65px;
   }
 
   .decorated-zone {
@@ -322,7 +333,6 @@
   .decorated__title-footer {
     margin-right: 10px;
     margin-left: 10px;
-    font-size: 116px;
   }
 
   .decorated-text {
@@ -350,6 +360,10 @@
     grid-template-columns: 1fr;
     padding: 0 10px;
     margin-bottom: 50px;
+  }
+
+  .block-what__title{
+    grid-template-columns: 1fr;
   }
 
   .gallery {
