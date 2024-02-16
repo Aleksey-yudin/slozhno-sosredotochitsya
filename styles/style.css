@@ -309,7 +309,6 @@
 
   .header__theme-menu-list {
     padding-top: 75px;
-    margin-bottom: 65px;
   }
 
   .gallery__wrapper {
@@ -329,6 +328,7 @@
 
   .header__theme-menu-list {
     padding-right: 10px;
+    margin-bottom: 65px;
   }
 
   .decorated-zone {
