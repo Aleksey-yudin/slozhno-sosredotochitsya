@@ -14,7 +14,6 @@
   list-style-type: none;
   gap: 10px;
   padding-top: 20px;
-  margin-bottom: 273px;
 }
 
 .header__theme-menu-button {
@@ -49,11 +48,14 @@
 
 .decorated-zone {
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
   height: 100vh;
   margin-bottom: 60px;
 }
 
 .decorated__title-footer {
+  justify-self: center;
   color: var(--h1-text-color);
   text-shadow: var(--h1-text-shadow);
   font-family: var(--font);
@@ -62,11 +64,8 @@
   line-height: 82.5%;
 }
 
-.decorated__title-footer-margin-bottom {
-  margin-bottom: 114px;
-}
-
 .decorated-text {
+  align-self: center;
   color: var(--text-decoration);
   font-family: var(--font);
   max-width: 491px;
@@ -292,10 +291,6 @@
     font-size: 120px;
   }
 
-  .decorated__title-footer-margin-bottom {
-    margin-bottom: 162px;
-  }
-
   .decorated-text {
     max-width: 364px;
   }
@@ -323,9 +318,7 @@
     margin-bottom: 65px;
   }
 
-  .decorated__title-footer {
-    font-size: 116px;
-  }
+
 
   .decorated__title-footer-margin-bottom {
     margin-bottom: 55px;
