@@ -55,7 +55,6 @@
 }
 
 .decorated__title-footer {
-  justify-self: center;
   color: var(--h1-text-color);
   text-shadow: var(--h1-text-shadow);
   font-family: var(--font);
@@ -181,13 +180,13 @@
 .block-what__title {
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns: 0.97fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
 .block-what__row-wrapper {
   display: grid;
-  grid-template-columns: 0.97fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: auto;
   gap: 20px;
 }
